@@ -13,7 +13,7 @@ This is a compilation of reusable AHK scripts.
 
 - [Chrome Profile Launcher](AHK/Chrome-Profile-Launcher.ahk)
 
-    This can launch Chrome instances based on the profile. If the Chrome profile was already launched, it will activate or set the focus to that window.
+    This can launch Chrome instances based on the profile. If the Chrome profile was already launched by this script, it will activate or set the focus to that window.
 
     ```ahk
     ; CTRL + ALT + ` >>> Open Chrome using the Default profile.
@@ -29,7 +29,7 @@ This is a compilation of reusable AHK scripts.
     return
     ```
 
-    Take not that the `DetectHiddenWindows` is turned `On` so the script can check the Chrome window across different virtual desktops.
+    Take note that the `DetectHiddenWindows` is turned `On` so the script can detect the Chrome windows across different virtual desktops.
 
 - [Hotstring Helper](AHK/Hotstring-Helper.ahk)
 
