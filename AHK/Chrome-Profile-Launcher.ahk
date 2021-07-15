@@ -1,3 +1,10 @@
+; This can launch Chrome instances based on the profile.
+; If the Chrome profile was already launched, it will activate or set the focus to that window.
+
+; Author: kakaiba-talaga
+; License: GPL-3.0-or-later
+; Repository: https://github.com/kakaiba-talaga/AutoHotkey-Scripts
+
 DetectHiddenWindows, On
 
 chrome_profile_launcher(profile := "Default")

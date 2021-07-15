@@ -6,7 +6,7 @@ This is a compilation of reusable AHK scripts.
 
 [AutoHotkey](https://www.autohotkey.com/) should be installed first or use a compiled version of the AHK script so it can run by its own.
 
-- AutoHotkey is for **Windows** only.
+- AutoHotkey is only available for **Windows**.
 - Developed and Tested using version `1.1.33.09`.
 
 ## AHK Scripts
@@ -45,4 +45,4 @@ Community contributions are encouraged! Feel free to report bugs and feature req
 
 ## License
 
-`AutoHotkey` is an Open-Source Software *(OSS)* and is available for use under the [GNU GPL v3](https://github.com/kakaiba-talaga/AutoHotkey-Scripts/blob/main/LICENSE) license.
+`AutoHotkey Scripts` is an Open-Source Software *(OSS)* and is available for use under the [GNU GPL v3](https://github.com/kakaiba-talaga/AutoHotkey-Scripts/blob/main/LICENSE) license.

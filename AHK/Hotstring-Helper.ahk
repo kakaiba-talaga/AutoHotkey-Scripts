@@ -2,6 +2,10 @@
 ; This was modified to be able to create new Hotstrings without reloading.
 ; This was modified again with some optimizations by kakaiba-talaga.
 
+; Author: kakaiba-talaga
+; License: GPL-3.0-or-later
+; Repository: https://github.com/kakaiba-talaga/AutoHotkey-Scripts
+
 ; Skips the dialog box and replaces the old instance automatically.
 #SingleInstance Force
 
