@@ -18,15 +18,15 @@ This is a compilation of reusable AHK scripts.
     ```ahk
     ; CTRL + ALT + ` >>> Open Chrome using the Default profile.
     ^!`::
-    chrome_profile_launcher()
-    return
-    ``
+        chrome_profile_launcher()
+        return
+    ```
 
     ```ahk
     ; CTRL + ALT + 1 >>> Open Chrome using the Profile 1 profile.
     ^!1::
-    chrome_profile_launcher("Profile 1")
-    return
+        chrome_profile_launcher("Profile 1")
+        return
     ```
 
     Take note that the `DetectHiddenWindows` is turned `On` so the script can detect the Chrome windows across different virtual desktops.
@@ -38,6 +38,10 @@ This is a compilation of reusable AHK scripts.
     By pressing the specified *Hotkey*, `CTRL + ALT + H` in this case, the currently selected text can be turned into a *Hotstring*. The newly created *Hotstring* will be appended in the script itself.
 
     This was customized to be able to add the new *Hotstring* and activate it without reloading the script. In my version, I just made some optimizations.
+
+- [MoveMouse](AHK/MoveMouse.ahk)
+
+    Prevents the computer from sleeping or idling by moving the mouse cursor at a specified interval. This was inspired by the NoSleep (.Net) app by Mike Langford.
 
 ## Contribute
 
