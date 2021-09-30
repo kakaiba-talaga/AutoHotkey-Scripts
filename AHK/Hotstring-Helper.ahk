@@ -6,8 +6,16 @@
 ; License: GPL-3.0-or-later
 ; Repository: https://github.com/kakaiba-talaga/AutoHotkey-Scripts
 
+; Maximize Performance
+#NoEnv ; Prevents empty variables from being looked up as potential environment variables
+SetBatchLines -1 ; Run the script at maximum speed.
+ListLines Off ; Omits subsequently-executed lines from the history.
+
 ; Skips the dialog box and replaces the old instance automatically.
 #SingleInstance Force
+
+; Changes the priority of the script to High.
+Process, Priority, , H
 
 
 ; CTRL + ALT + H Hotkey

@@ -1,5 +1,12 @@
 # AutoHotkey Scripts
 
+- [AutoHotkey Scripts](#autohotkey-scripts)
+  - [Requirements](#requirements)
+  - [AHK Scripts](#ahk-scripts)
+    - [Maximum Performance](#maximum-performance)
+  - [Contribute](#contribute)
+  - [License](#license)
+
 This is a compilation of reusable AHK scripts.
 
 ## Requirements
@@ -39,9 +46,25 @@ This is a compilation of reusable AHK scripts.
 
     This was customized to be able to add the new *Hotstring* and activate it without reloading the script. In my version, I just made some optimizations.
 
+    This will run at high priority at [maximum performance](#maximum-performance).
+
 - [MoveMouse](AHK/MoveMouse.ahk)
 
-    Prevents the computer from sleeping or idling by moving the mouse cursor at a specified interval. This was inspired by the NoSleep (.Net) app by Mike Langford.
+    Prevents the computer from *sleeping* or *idling* by moving the mouse cursor to different positions at different intervals.
+
+    This will run at high priority at [maximum performance](#maximum-performance).
+
+    This was inspired by the NoSleep (.Net) app by Mike Langford.
+
+### Maximum Performance
+
+Some of the scripts were optimized to be able to run at maximum performance. This was achieved by adding the following lines of codes at the beginning:
+
+```autohotkey
+#NoEnv ; Prevents empty variables from being looked up as potential environment variables
+SetBatchLines -1 ; Run the script at maximum speed.
+ListLines Off ; Omits subsequently-executed lines from the history.
+```
 
 ## Contribute
 
