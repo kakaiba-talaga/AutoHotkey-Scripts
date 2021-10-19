@@ -1,5 +1,7 @@
 # AutoHotkey Scripts
 
+This is a compilation of reusable `AHK` scripts.
+
 - [AutoHotkey Scripts](#autohotkey-scripts)
   - [Requirements](#requirements)
   - [AHK Scripts](#ahk-scripts)
@@ -7,14 +9,14 @@
   - [Contribute](#contribute)
   - [License](#license)
 
-This is a compilation of reusable AHK scripts.
-
 ## Requirements
 
-[AutoHotkey](https://www.autohotkey.com/) should be installed first or use a compiled version of the AHK script so it can run by its own.
+[AutoHotkey](https://www.autohotkey.com/) should be installed first or use a compiled version of the `AHK` script so it can run by its own.
 
 - AutoHotkey is only available for **Windows**.
 - Developed and Tested using version `1.1.33.09`.
+
+[Go back to TOC](#autohotkey-scripts)
 
 ## AHK Scripts
 
@@ -52,6 +54,13 @@ This is a compilation of reusable AHK scripts.
 
     Prevents the computer from *sleeping* or *idling* by moving the mouse cursor to different positions at different intervals.
 
+    Some rules:
+
+    1. If Windows is locked, the mouse cursor will not be moved.
+    2. If the user is typing, the mouse cursor will not be moved.
+    3. If the mouse cursor position is not the same as the initial position, the mouse cursor will not be moved.
+    4. After some time, this will simulate key presses to prevent idling on some timers. If the user is typing, the script will not simulate any key presses.
+
     This will run at high priority at [maximum performance](#maximum-performance).
 
     This was inspired by the NoSleep (.Net) app by Mike Langford.
@@ -66,6 +75,8 @@ SetBatchLines -1 ; Run the script at maximum speed.
 ListLines Off ; Omits subsequently-executed lines from the history.
 ```
 
+[Go back to TOC](#autohotkey-scripts)
+
 ## Contribute
 
 Community contributions are encouraged! Feel free to report bugs and feature requests to the [issue tracker](https://github.com/kakaiba-talaga/AutoHotkey-Scripts/issues) provided by *GitHub*.
@@ -73,3 +84,5 @@ Community contributions are encouraged! Feel free to report bugs and feature req
 ## License
 
 `AutoHotkey Scripts` is an Open-Source Software *(OSS)* and is available for use under the [GNU GPL v3](https://github.com/kakaiba-talaga/AutoHotkey-Scripts/blob/main/LICENSE) license.
+
+[Go back to TOC](#autohotkey-scripts)
