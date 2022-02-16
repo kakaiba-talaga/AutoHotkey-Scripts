@@ -3,18 +3,18 @@
 This is a compilation of reusable `AHK` scripts.
 
 - [AutoHotkey Scripts](#autohotkey-scripts)
-  - [Requirements](#requirements)
-  - [AHK Scripts](#ahk-scripts)
-    - [Maximum Performance](#maximum-performance)
-  - [Contribute](#contribute)
-  - [License](#license)
+    - [Requirements](#requirements)
+    - [AHK Scripts](#ahk-scripts)
+        - [Maximum Performance](#maximum-performance)
+    - [Contribute](#contribute)
+    - [License](#license)
 
 ## Requirements
 
 [AutoHotkey](https://www.autohotkey.com/) should be installed first or use a compiled version of the `AHK` script so it can run by its own.
 
 - AutoHotkey is only available for **Windows**.
-- Developed and Tested using version `1.1.33.09`.
+- Developed and Tested using version `>= 1.1.33.09`.
 
 [Go back to TOC](#autohotkey-scripts)
 
@@ -52,7 +52,7 @@ This is a compilation of reusable `AHK` scripts.
 
 - [MoveMouse](AHK/MoveMouse.ahk)
 
-    Prevents the computer from *sleeping* or *idling* by moving the mouse cursor to different positions at different intervals.
+    Prevents the computer from _sleeping_ or _idling_ by moving the mouse cursor to different positions at different speeds at different intervals.
 
     Some rules:
 
@@ -60,6 +60,7 @@ This is a compilation of reusable `AHK` scripts.
     2. If the user is typing, the mouse cursor will not be moved.
     3. If the mouse cursor position is not the same as the initial position, the mouse cursor will not be moved.
     4. After some time, this will simulate key presses to prevent idling on some timers. If the user is typing, the script will not simulate any key presses.
+    5. There are some exceptions, when certain executables are on focus, where the key presses are not simulated.
 
     This will run at high priority at [maximum performance](#maximum-performance).
 

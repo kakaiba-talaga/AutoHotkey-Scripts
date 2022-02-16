@@ -33,9 +33,10 @@ Repository: https://github.com/kakaiba-talaga/AutoHotkey-Scripts
 )
 
 appTitle := "MoveMouse"
-appVersion := "v1.2.4"
+appVersion := "v1.2.8"
 appAuthor := "kakaiba-talaga"
 appTitle := appTitle . " by " . appAuthor . " " . appVersion
+
 
 Menu, Tray, Tip, %appTitle%
 
@@ -48,6 +49,7 @@ Menu, Tray, Add
 
 ; Creates a new menu item.
 Menu, Tray, Add, About, AboutHandler
+
 
 minTimeInterval := 5000
 maxTimeInterval := 15000
@@ -89,7 +91,7 @@ Loop
         if (isUserTyping)
             continue
 
-        SimulateKey()
+        SimulateKeypresses()
     }
 
     ; OutputDebug, ------------------------------
@@ -168,9 +170,7 @@ GetMedian(n1, n2, baseLine := 180000)
     Return median * 1
 }
 
-; Returns the mouse cursors current position (X and Y axes),
-;   the unique ID number of the window under the mouse cursor, and
-;   the name (ClassNN) of the control under the mouse cursor (this will be blank if cannot be determined).
+; Returns the mouse cursors current position (X and Y axes), the unique ID number of the window under the mouse cursor, and the name (ClassNN) of the control under the mouse cursor (this will be blank if cannot be determined).
 GetMouseCursorPos()
 {
     MouseGetPos, xPos, yPos, uniqueId, controlName
@@ -189,18 +189,32 @@ GetWinExe()
 }
 
 ; This **should** trick any timers like in HubStaff that a key was pressed and won't report any idle time.
-; Simulate some key presses.
-SimulateKey()
+; Simulate some keypresses.
+SimulateKeypresses()
 {
-    ; Specify which key presses are appliable.
+    ; Specify which key presses are applicable.
     ; You can also specify specific key presses based on specific applications.
 
+    ; Get the executable name of the currently focused application.
+    ahkExe := GetWinExe()
+
+    ; Array of excluded applications.
+    excludedApps := ["Explorer.EXE", "Spotify.exe", "WindowsTerminal.exe", "wmplayer.exe", "vlc.exe"]
+
+    if (IsInVar(excludedApps, ahkExe) == 0)
+    {
+        Send ^{z}^{y}
+        ; OutputDebug, Simulated Key: Ctrl+x, Ctrl+y
+    }
+    else {
+        Send {Left}{Right}
+        ; OutputDebug, Simulated Key: Left, Right
+    }
+
     ; Send {Shift 2}
-    Send ^{Z}^{Y}
-    ; OutputDebug, Simulated Key: Ctrl+Z, Ctrl+Y
+    ; OutputDebug, Simulated Key: Shift x 2
 
     ; Specific key presses based on specific applications.
-    ; ahkExe := GetWinExe()
 
     ; if (ahkExe == "msedge.exe")
     ; {
@@ -215,6 +229,19 @@ SimulateKey()
     ; {
     ;     Send {Alt 2}
     ; }
+}
+
+; Checks if [needle] is in the [haystack]. Returns the index location when found. Otherwise, returns 0.
+IsInVar(haystack, needle)
+{
+    for index, value in haystack
+        if (value = needle)
+            return index
+
+    if !(IsObject(haystack))
+        throw Exception("Bad haystack!", -1, haystack)
+
+    return 0
 }
 
 ; Checks if the user is currently typing something.
