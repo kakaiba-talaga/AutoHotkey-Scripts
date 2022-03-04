@@ -37,7 +37,7 @@ chrome_profile_launcher(profile := "Default")
             Run %targetProfile%
 
             ; Wait for the Chrome window to be active.
-            WinWaitActive, ahk_exe chrome.exe, , 2
+            WinWaitActive, ahk_exe chrome.exe, , 5
 
             if (ErrorLevel)
             {
