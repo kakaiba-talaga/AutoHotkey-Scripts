@@ -14,13 +14,14 @@ This is a compilation of reusable `AHK` scripts.
 [AutoHotkey](https://www.autohotkey.com/) should be installed first or use a compiled version of the `AHK` script so it can run by its own.
 
 - AutoHotkey is only available for **Windows**.
-- Developed and Tested using version `>= 1.1.33.09`.
+- Developed and Tested using version `>= 1.1.33.09`, `< 2.0`.
+- All scripts that have a `v2` counterpart will only work in `>= 2.0`.
 
 [Go back to TOC](#autohotkey-scripts)
 
 ## AHK Scripts
 
-- [Chrome Profile Launcher](AHK/Chrome-Profile-Launcher.ahk)
+- [Chrome Profile Launcher](AHK/Chrome-Profile-Launcher.ahk), [Chrome Profile Launcher v2](AHKv2/Chrome-Profile-Launcher.ahk)
 
     This can launch Chrome instances based on the profile. If the Chrome profile was already launched by this script, it will activate or set the focus to that window.
 
@@ -50,7 +51,7 @@ This is a compilation of reusable `AHK` scripts.
 
     This will run at high priority at [maximum performance](#maximum-performance).
 
-- [MoveMouse](AHK/MoveMouse.ahk)
+- [MoveMouse](AHK/MoveMouse.ahk), [MoveMouse v2](AHKv2/MoveMouse.ahk)
 
     Prevents the computer from _sleeping_ or _idling_ by moving the mouse cursor to different positions at different speeds at different intervals.
 
@@ -64,7 +65,7 @@ This is a compilation of reusable `AHK` scripts.
 
     This will run at high priority at [maximum performance](#maximum-performance).
 
-    This was inspired by the NoSleep (.Net) app by Mike Langford.
+    This was inspired by the `NoSleep` _(.Net)_ app by _Mike Langford_.
 
 ### Maximum Performance
 
@@ -75,6 +76,8 @@ Some of the scripts were optimized to be able to run at maximum performance. Thi
 SetBatchLines -1 ; Run the script at maximum speed.
 ListLines Off ; Omits subsequently-executed lines from the history.
 ```
+
+As of `AutoHotkey v2`, this is **not** needed anymore.
 
 [Go back to TOC](#autohotkey-scripts)
 
