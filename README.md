@@ -43,11 +43,11 @@ This is a compilation of reusable `AHK` scripts.
 
 - [Hotstring Helper](AHK/Hotstring-Helper.ahk)
 
-    This script may be useful if you are a heavy user of *Hotstrings*. It's based on the script originally created by *Andreas Borutta*.
+    This script may be useful if you are a heavy user of _Hotstrings_. It's based on the script originally created by _Andreas Borutta_.
 
-    By pressing the specified *Hotkey*, `CTRL + ALT + H` in this case, the currently selected text can be turned into a *Hotstring*. The newly created *Hotstring* will be appended in the script itself.
+    By pressing the specified _Hotkey_, `CTRL + ALT + H` in this case, the currently selected text can be turned into a _Hotstring_. The newly created _Hotstring_ will be appended in the script itself.
 
-    This was customized to be able to add the new *Hotstring* and activate it without reloading the script. In my version, I just made some optimizations.
+    This was customized to be able to add the new _Hotstring_ and activate it without reloading the script. In my version, I just made some optimizations.
 
     This will run at high priority at [maximum performance](#maximum-performance).
 
@@ -61,7 +61,7 @@ This is a compilation of reusable `AHK` scripts.
     2. If the user is typing, the mouse cursor will not be moved.
     3. If the mouse cursor position is not the same as the initial position, the mouse cursor will not be moved.
     4. After some time, this will simulate key presses to prevent idling on some timers. If the user is typing, the script will not simulate any key presses.
-    5. There are some exceptions, when certain executables are on focus, where the key presses are not simulated.
+    5. There are some exceptions, when certain executables are in focus, where the key presses are not simulated.
 
     This will run at high priority at [maximum performance](#maximum-performance).
 
@@ -83,10 +83,10 @@ As of `AutoHotkey v2`, this is **not** needed anymore.
 
 ## Contribute
 
-Community contributions are encouraged! Feel free to report bugs and feature requests to the [issue tracker](https://github.com/kakaiba-talaga/AutoHotkey-Scripts/issues) provided by *GitHub*.
+Community contributions are encouraged! Feel free to report bugs and feature requests to the [issue tracker](https://github.com/kakaiba-talaga/AutoHotkey-Scripts/issues) provided by _GitHub_.
 
 ## License
 
-`AutoHotkey Scripts` is an Open-Source Software *(OSS)* and is available for use under the [GNU GPL v3](https://github.com/kakaiba-talaga/AutoHotkey-Scripts/blob/main/LICENSE) license.
+`AutoHotkey Scripts` is an Open-Source Software _(OSS)_ and is available for use under the [GNU GPL v3](https://github.com/kakaiba-talaga/AutoHotkey-Scripts/blob/main/LICENSE) license.
 
 [Go back to TOC](#autohotkey-scripts)

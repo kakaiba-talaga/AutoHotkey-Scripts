@@ -1,3 +1,11 @@
-.*
-Personal
-Test
+# Ignore any directories and files that starts with a dot.
+**/.*/
+**/.*
+
+# Directories
+Personal/
+Test/
+
+# Files
+!**/.git*
+!.markdown*
